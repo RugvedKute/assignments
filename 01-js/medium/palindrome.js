@@ -4,7 +4,16 @@
 */
 
 function isPalindrome(str) {
-  return true;
+let string2 = str.replaceAll(" ", "")
+const string = string2.replace(/[|&;$%"<>?!()+.,]/g , "");
+const input = string.toLowerCase().split('');
+  let palindromeString = ''
+  for(let i=input.length - 1; i >= 0; i--) {
+    palindromeString += input[i]
+  }
+  return string.toLowerCase() === palindromeString;
 }
+
+console.log(isPalindrome('Eva, can I see bees in a cave?'))
 
 module.exports = isPalindrome;

@@ -16,6 +16,49 @@
   Once you've implemented the logic, test your code by running
 */
 
-class Calculator {}
+class Calculator {
+
+  constructor(result) {
+    this.result = 0;
+  }
+
+  add(number) {
+    this.result += number
+  }
+
+  subtract(number) {
+    this.result -= number
+  }
+
+  multiply(number) {
+    this.result *= number
+  }
+
+  divide(number) {
+    this.result /= number;
+  }
+
+  getResult() {
+    return this.result;
+  }
+
+  clear() {
+    this.result = 0;
+  }
+
+  calculate(string) {
+    let noSpaceString = string.replaceAll(" ", "");
+    console.log(noSpaceString)
+  //   for (let i =0; i < noSpaceString.length; i++) {
+  //     if ()
+  //   }
+
+  // }
+}
+}
+
+calc = new Calculator();
+
+calc.calculate(`10 +   2 *    (   6 - (4 + 1) / 2) + 7`);
 
 module.exports = Calculator;
